@@ -1,0 +1,17 @@
+title: sreaperr's Writeups
+description: Writeups de máquinas de hacking (DockerLabs, HTB, etc.)
+theme: jekyll-theme-minimal
+
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: page
+
+show_excerpts: false
