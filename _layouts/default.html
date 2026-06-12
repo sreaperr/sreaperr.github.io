@@ -29,6 +29,7 @@
             <a href="{{ '/' | relative_url }}">Inicio</a>
             <a href="{{ '/writeups/' | relative_url }}">Writeups</a>
             <a href="{{ '/apuntes/' | relative_url }}">Apuntes</a>
+            <a href="{{ '/sobre-mi/' | relative_url }}">Sobre mí</a>
           </nav>
 
           {% if site.show_downloads %}
@@ -54,6 +55,7 @@
         {% if site.github.is_project_page %}
         <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
+        <a class="btn" href="{{ site.linkedin_url }}" target="_blank" rel="noopener">LinkedIn</a>
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
