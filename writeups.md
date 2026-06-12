@@ -4,8 +4,6 @@ title: Writeups
 permalink: /writeups/
 ---
 
-# Writeups
-
 {% assign by_source = site.writeups | group_by: "source" %}
 {% for source_group in by_source %}
 ## {{ source_group.name }}

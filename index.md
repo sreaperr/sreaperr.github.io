@@ -3,13 +3,6 @@ layout: default
 title: Inicio
 ---
 
-# sreaperr's Security Notes
+En esta web recojo mis **writeups** de máquinas de hacking (DockerLabs, HTB y otras plataformas) y mis **apuntes de ciberseguridad**, organizados por temas, a medida que voy completando retos y estudiando.
 
-<img src="/assets/images/skull.jpg" alt="Skull" class="home-hero">
-
-Bienvenido. Aquí encontrarás:
-
-<div class="home-links">
-  <a href="{{ '/writeups/' | relative_url }}">Writeups</a>
-  <a href="{{ '/apuntes/' | relative_url }}">Apuntes</a>
-</div>
+Usa el menú superior para navegar entre las secciones.

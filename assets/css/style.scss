@@ -35,6 +35,18 @@ a:hover {
 #header_wrap {
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+#header_photo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
 }
 
 #header_wrap .inner {
@@ -124,42 +136,6 @@ a:hover {
   border-color: var(--accent);
   color: var(--accent-hover);
   transform: translateX(4px);
-}
-
-/* Imagen de portada */
-.home-hero {
-  display: block;
-  max-width: 220px;
-  margin: 10px auto 20px;
-  border-radius: 8px;
-}
-
-/* Tarjetas de inicio */
-.home-links {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 24px;
-}
-
-.home-links a {
-  flex: 1;
-  min-width: 200px;
-  padding: 24px;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: 700;
-  color: var(--text);
-  transition: border-color 0.15s, transform 0.1s;
-}
-
-.home-links a:hover {
-  border-color: var(--accent);
-  color: var(--accent-hover);
-  transform: translateY(-2px);
 }
 
 /* Bloques de código */

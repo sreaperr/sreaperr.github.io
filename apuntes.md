@@ -4,8 +4,6 @@ title: Apuntes
 permalink: /apuntes/
 ---
 
-# Apuntes de ciberseguridad
-
 {% if site.notes.size == 0 %}
 _Próximamente._
 {% else %}

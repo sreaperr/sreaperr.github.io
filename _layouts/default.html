@@ -20,6 +20,8 @@
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
 
+          <img id="header_photo" src="/assets/images/skull.jpg" alt="">
+
           <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
 
@@ -41,7 +43,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        {% if page.title and page.title != "Inicio" %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+        {% if page.title %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
         {{ content }}
       </section>
     </div>
