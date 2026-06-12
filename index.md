@@ -3,13 +3,9 @@ layout: default
 title: Inicio
 ---
 
-# sreaperr's Writeups
+# sreaperr's Security Notes
 
-Bienvenido a mis writeups de máquinas de hacking (DockerLabs, HTB, etc.)
+Bienvenido. Aquí encontrarás:
 
-## DockerLabs
-
-### Fácil
-
-{% for w in site.writeups %}{% if w.source == "DockerLabs" and w.difficulty == "Fácil" %}- [{{ w.title }}]({{ w.url }})
-{% endif %}{% endfor %}
+- **[Writeups]({{ '/writeups/' | relative_url }})**: resolución de máquinas y laboratorios de hacking (DockerLabs, HTB, etc.)
+- **[Apuntes]({{ '/apuntes/' | relative_url }})**: notas de ciberseguridad organizadas por temas

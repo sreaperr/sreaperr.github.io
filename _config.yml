@@ -1,16 +1,24 @@
-title: sreaperr's Writeups
-description: Writeups de máquinas de hacking (DockerLabs, HTB, etc.)
+title: sreaperr's Security Notes
+description: Writeups y apuntes de ciberseguridad
 theme: jekyll-theme-slate
 
 collections:
   writeups:
     output: true
     permalink: /writeups/:path/
+  notes:
+    output: true
+    permalink: /apuntes/:path/
 
 defaults:
   - scope:
       path: ""
       type: writeups
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: notes
     values:
       layout: page
 
