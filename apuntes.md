@@ -13,8 +13,9 @@ _Próximamente._
 {% for topic_group in by_topic %}
 ## {{ topic_group.name }}
 
-{% for n in topic_group.items %}- [{{ n.title }}]({{ n.url | relative_url }})
-{% endfor %}
+<div class="card-list">
+{% for n in topic_group.items %}  <a href="{{ n.url | relative_url }}">{{ n.title }}</a>
+{% endfor %}</div>
 
 {% endfor %}
 {% endif %}

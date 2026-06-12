@@ -7,5 +7,7 @@ title: Inicio
 
 Bienvenido. Aquí encontrarás:
 
-- **[Writeups]({{ '/writeups/' | relative_url }})**: resolución de máquinas y laboratorios de hacking (DockerLabs, HTB, etc.)
-- **[Apuntes]({{ '/apuntes/' | relative_url }})**: notas de ciberseguridad organizadas por temas
+<div class="home-links">
+  <a href="{{ '/writeups/' | relative_url }}">Writeups</a>
+  <a href="{{ '/apuntes/' | relative_url }}">Apuntes</a>
+</div>

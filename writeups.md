@@ -14,8 +14,9 @@ permalink: /writeups/
 {% for diff_group in by_difficulty %}
 ### {{ diff_group.name }}
 
-{% for w in diff_group.items %}- [{{ w.title }}]({{ w.url | relative_url }})
-{% endfor %}
+<div class="card-list">
+{% for w in diff_group.items %}  <a href="{{ w.url | relative_url }}">{{ w.title }}</a>
+{% endfor %}</div>
 
 {% endfor %}
 {% endfor %}
