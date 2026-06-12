@@ -5,6 +5,8 @@ title: Inicio
 
 # sreaperr's Security Notes
 
+<img src="/assets/images/skull.jpg" alt="Skull" class="home-hero">
+
 Bienvenido. Aquí encontrarás:
 
 <div class="home-links">

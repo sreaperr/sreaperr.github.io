@@ -126,6 +126,14 @@ a:hover {
   transform: translateX(4px);
 }
 
+/* Imagen de portada */
+.home-hero {
+  display: block;
+  max-width: 220px;
+  margin: 10px auto 20px;
+  border-radius: 8px;
+}
+
 /* Tarjetas de inicio */
 .home-links {
   display: flex;
