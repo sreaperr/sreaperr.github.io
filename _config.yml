@@ -1,6 +1,6 @@
 title: sreaperr's Writeups
 description: Writeups de máquinas de hacking (DockerLabs, HTB, etc.)
-theme: jekyll-theme-minimal
+theme: jekyll-theme-slate
 
 collections:
   writeups:
