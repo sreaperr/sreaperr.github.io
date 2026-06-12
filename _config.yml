@@ -15,11 +15,11 @@ defaults:
       path: ""
       type: writeups
     values:
-      layout: page
+      layout: default
   - scope:
       path: ""
       type: notes
     values:
-      layout: page
+      layout: default
 
 show_excerpts: false
