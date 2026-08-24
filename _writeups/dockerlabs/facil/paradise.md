@@ -1,4 +1,8 @@
-# DockerLabs - Paradise
+---
+title: "DockerLabs - Paradise"
+difficulty: "Fácil"
+source: "DockerLabs"
+---
 
 Laboratorio para practicar el análisis del código fuente, fuerza bruta y escalada de privilegios mediante movimiento entre usuarios.
 

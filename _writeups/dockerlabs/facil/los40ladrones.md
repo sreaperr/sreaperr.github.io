@@ -1,4 +1,8 @@
-# DockerLabs - Los 40 Ladrones
+---
+title: "DockerLabs - Los 40 Ladrones"
+difficulty: "Fácil"
+source: "DockerLabs"
+---
 
 Laboratorio para practicar port knocking para revelar el servicio SSH, fuerza bruta con Hydra y escalada de privilegios en Linux.
 

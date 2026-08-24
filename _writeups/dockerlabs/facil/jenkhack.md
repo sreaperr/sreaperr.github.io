@@ -1,4 +1,8 @@
-# DockerLabs - Jenkhack
+---
+title: "DockerLabs - Jenkhack"
+difficulty: "Fácil"
+source: "DockerLabs"
+---
 
 Laboratorio para practicar la explotación de Jenkins mediante la consola de scripts para obtener una reverse shell y escalar privilegios.
 
