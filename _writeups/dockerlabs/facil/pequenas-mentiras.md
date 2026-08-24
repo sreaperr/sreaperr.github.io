@@ -6,6 +6,12 @@ source: "DockerLabs"
 
 El reto se centra en la explotación de una vulnerabilidad conocida en un servicio web, utilizando herramientas como Metasploit para obtener acceso inicial al sistema. Posteriormente, se realiza una escalada de privilegios mediante la identificación y explotación de configuraciones inseguras, lo que permite al atacante obtener acceso root.
 
+## Despliegue
+
+```bash
+bash auto_deploy.sh pequeñasmentirosas.tar
+```
+
 ## Reconocimiento
 
 Lanzamos un escaneo de red:
