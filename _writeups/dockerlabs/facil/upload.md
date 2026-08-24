@@ -6,6 +6,12 @@ source: "DockerLabs"
 
 Panel vulnerable de subida de archivos, donde se puede subir código malicioso y conseguir ejecución remota de comandos en el servidor.
 
+## Despliegue
+
+```bash
+bash auto_deploy.sh upload.tar
+```
+
 ## Reconocimiento
 
 Comenzamos con un mapeo de red:

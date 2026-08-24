@@ -6,6 +6,12 @@ source: "DockerLabs"
 
 Máquina para explotar la vulnerabilidad de Python Library Hijacking.
 
+## Despliegue
+
+```bash
+bash auto_deploy.sh library.tar
+```
+
 ## Reconocimiento
 
 Empezamos con un mapeo de la red:

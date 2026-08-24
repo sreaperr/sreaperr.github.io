@@ -9,8 +9,7 @@ Explotación de Drupal 8 mediante CVE-2018-7600 (Drupalgeddon2) con el CMS corri
 ## Despliegue
 
 ```bash
-docker load -i ejotapete.tar
-docker run -d --rm --name ejotapete ejotapete:latest
+bash auto_deploy.sh ejotapete.tar
 ```
 
 ## Reconocimiento

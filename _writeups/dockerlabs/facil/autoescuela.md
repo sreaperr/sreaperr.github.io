@@ -1,12 +1,15 @@
-# DockerLabs - Autoescuela
+---
+title: "DockerLabs - Autoescuela"
+difficulty: "Fácil"
+source: "DockerLabs"
+---
 
 Laboratorio que combina dos CVEs de Node.js: inspector expuesto sin autenticación (acceso inicial) y CVE-2025-55183 (Next.js Server Actions RCE como root).
 
 ## Despliegue
 
 ```bash
-docker load -i autoescuela.tar
-docker run -d --rm --name autoescuela autoescuela:latest
+bash auto_deploy.sh autoescuela.tar
 ```
 
 ## Reconocimiento

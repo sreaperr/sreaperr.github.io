@@ -6,6 +6,12 @@ source: "DockerLabs"
 
 Laboratorio para practicar la localización y subida de una webshell para ganar acceso, con escalada de privilegios mediante sudo.
 
+## Despliegue
+
+```bash
+bash auto_deploy.sh whereismywebshell.tar
+```
+
 ## Reconocimiento
 
 Empezamos con un escaneo de puertos y versiones:

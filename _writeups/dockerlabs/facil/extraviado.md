@@ -9,8 +9,7 @@ Codificación base64 en la página por defecto de Apache para obtener acceso SSH
 ## Despliegue
 
 ```bash
-docker load -i extraviado.tar
-docker run -d --rm --name extraviado extraviado:latest
+bash auto_deploy.sh extraviado.tar
 ```
 
 ## Reconocimiento
@@ -69,7 +68,7 @@ su diego
 
 ## Escalada — diego → root
 
-Navegando manualmente por los directorios ocultos de diego se encuentra un acertijo en `.local/share/.-`:
+Navegando manualmente por los directorios ocultos de diego se encuentra el acertijo en `.local/share/.-`:
 
 ```bash
 ls -la ~/.local/share/
@@ -88,14 +87,14 @@ Soy amigo de los niños, en historias de ensueño.
 Quien soy, que en el frío encuentro mi dueño?
 ```
 
-La respuesta es **oso azul** — animal ártico de color inusual protagonista de cuentos infantiles. En el fichero `.bash_logout` de diego hay otro base64:
+La respuesta al acertijo es **oso azul** — animal ártico de color inusual (azul, como el cielo y el mar) protagonista de cuentos infantiles. En el fichero `.bash_logout` de diego hay otro base64:
 
 ```bash
 echo "YjNvYXp1bA==" | base64 -d
 # b3oazul
 ```
 
-`b3oazul` es "osoazul" en leet speak (b=o, 3=s). La contraseña de root es **osoazul**.
+`b3oazul` es "osoazul" escrito en leet speak (b=o, 3=s). La contraseña de root es **osoazul**.
 
 ```bash
 su root
@@ -119,4 +118,4 @@ Cadena de ataque completa:
 - El source HTML de páginas por defecto puede contener credenciales — siempre revisar.
 - `base64 -d` decodifica; `base64` codifica; `base64 -w 0` codifica sin saltos de línea.
 - Los directorios ocultos (`.nombre`) se listan con `ls -la` o navegando manualmente.
-- Leet speak ofusca texto visualmente: b=o, 3=s, 4=a, 1=i, 0=o, 5=s.
+- Leet speak ofusca texto visualmente: b=o, 3=s, 4=a, 1=i, 0=o, 5=s. Identificarlo ayuda a decodificar contraseñas.

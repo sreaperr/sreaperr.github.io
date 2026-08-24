@@ -9,8 +9,7 @@ Information disclosure, fuzzing web y credential leakage combinados para consegu
 ## Despliegue
 
 ```bash
-docker load -i bypassme.tar
-docker run -d --rm --name bypassme bypassme:latest
+bash auto_deploy.sh bypassme.tar
 ```
 
 ## Reconocimiento

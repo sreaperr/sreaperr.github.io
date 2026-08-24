@@ -28,17 +28,19 @@ Puertos detectados:
 gobuster dir -u http://172.17.0.2:5000 -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt
 ```
 
-Directorios encontrados: `/login`, `/admin`
+Directorios encontrados: `/login`, `/admin` (también expuestos como botón en la página principal).
 
 ## Data Leakage — Credenciales admin
 
-Credenciales por defecto en `/login`:
+Acceso al panel de login en `/login`. Credenciales por defecto:
 
 ```
 admin:admin
 ```
 
-En el código fuente HTML del panel `/admin` hay un comentario con credenciales de backup:
+Acceso al panel de gestión de pedidos en `/admin`.
+
+En el **código fuente HTML** del panel admin se encuentra un comentario con credenciales de backup:
 
 ```html
 <!-- sysadmin:backup123 -->
@@ -53,13 +55,15 @@ ssh sysadmin@172.17.0.2
 
 ## Data Leakage — Secret Key Flask
 
-En el home de sysadmin, `app.py` tiene la secret key hardcodeada:
+En el home de sysadmin se encuentra `app.py` con la secret key hardcodeada:
 
 ```python
 app.secret_key = 'cuidaditocuidadin'
 ```
 
 ## User Pivoting — sysadmin → balulero
+
+La secret key `cuidaditocuidadin` es la contraseña del usuario `balulero`:
 
 ```bash
 su balulero
@@ -68,7 +72,7 @@ su balulero
 
 ## Escalada de Privilegios — balulero → root
 
-En `/home/balulero/.bashrc` está la contraseña de root:
+En `/home/balulero/.bashrc` se encuentra la contraseña de root hardcodeada:
 
 ```bash
 cat /home/balulero/.bashrc
@@ -84,4 +88,10 @@ whoami
 
 ## Conclusión
 
-Cadena de ataque: credenciales por defecto → comentario HTML con SSH credentials → SSH como sysadmin → secret key en app.py → contraseña de balulero → contraseña de root en .bashrc → root.
+Cadena de ataque: credenciales por defecto en web → comentario HTML con SSH credentials → SSH como sysadmin → secret key en app.py como contraseña de balulero → contraseña de root en .bashrc → root.
+
+**Lecciones aprendidas:**
+- Nunca dejar comentarios con credenciales en el HTML — son visibles para cualquiera.
+- Las secret keys de Flask no deben estar hardcodeadas en el código fuente.
+- Los ficheros `.bashrc` no son un lugar seguro para guardar contraseñas.
+- El user pivoting encadenado es un patrón común en CTFs: cada usuario tiene una pista para el siguiente.
