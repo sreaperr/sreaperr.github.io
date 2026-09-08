@@ -70,7 +70,7 @@ su balulero
 # contraseña: cuidaditocuidadin
 ```
 
-## Escalada de Privilegios — balulero → root
+## Escalada de privilegios — balulero → root
 
 En `/home/balulero/.bashrc` se encuentra la contraseña de root hardcodeada:
 

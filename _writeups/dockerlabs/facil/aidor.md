@@ -106,7 +106,7 @@ ssh aidor@172.17.0.2
 
 ---
 
-## Escalada de Privilegios
+## Escalada de privilegios
 
 Dentro del sistema, se encontró el código fuente de la app Flask en `/home/`:
 

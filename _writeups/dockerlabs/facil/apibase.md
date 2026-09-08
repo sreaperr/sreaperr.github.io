@@ -70,7 +70,7 @@ ssh pingu@172.17.0.2
 # contraseña: pinguinasio
 ```
 
-## Escalada de Privilegios — Análisis de tráfico de red
+## Escalada de privilegios — Análisis de tráfico de red
 
 En `/home` hay un archivo `network.pcap`. Lectura directa con cat:
 

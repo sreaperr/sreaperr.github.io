@@ -68,7 +68,7 @@ ssh pepe@172.17.0.2
 # contraseña: P123pepe3456P
 ```
 
-## Escalada de Privilegios
+## Escalada de privilegios
 
 SUID en binarios no estándar:
 

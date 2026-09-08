@@ -209,3 +209,7 @@ cat /root/root.txt
 - **Password reuse:** credenciales únicas por servicio, gestor de secretos (vault), no hardcodear en `config.php` dentro del web root.
 - **Sudo:** no otorgar `NOPASSWD` a binarios con capacidad de ejecución arbitraria (`find`, `vim`, `awk`, etc.). Mínimo privilegio.
 - Eliminar la cuenta temporal `guest:guest` y el comentario del HTML.
+
+## Conclusión
+
+La máquina encadena cuatro vectores independientes hasta llegar a root: un JWT HS256 firmado con un secreto débil que permite escalar de invitado a administrador, una command injection que da la primera shell como www-data, reutilización de una contraseña filtrada en `config.php` para saltar al usuario `bruce`, y un binario con `sudo` mal configurado (`find`) que entrega la shell final.

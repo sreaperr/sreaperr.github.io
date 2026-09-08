@@ -148,3 +148,7 @@ whoami
 | 4 | Hydra brute force SSH (`lucas:chocolate`) | Acceso como lucas |
 | 5 | `sudo -u andy /bin/sed` (GTFOBins) | Movimiento lateral a andy |
 | 6 | SUID `/usr/local/bin/privileged_exec` | root |
+
+## Conclusión
+
+El camino hasta root pasa por un secreto en Base64 oculto en el código fuente web, enumeración de usuarios vía SMB, fuerza bruta SSH sobre `lucas`, un pivote a `andy` abusando de `sudo sed` (GTFOBins) y, finalmente, un binario SUID personalizado que otorga una shell de root directamente.

@@ -2,8 +2,6 @@
 title: "DockerLabs - InfluencerHate"
 difficulty: "Fácil"
 source: "DockerLabs"
-status: "done"
-date: "2026-07-21"
 ---
 
 Máquina orientada a practicar múltiples capas de fuerza bruta: HTTP Basic Auth sobre Apache, formulario de login web PHP, acceso SSH y escalada de privilegios mediante bruteforce a `su root`.
@@ -102,3 +100,7 @@ su root
 whoami
 # root
 ```
+
+## Conclusión
+
+El laboratorio se basa por completo en fuerza bruta encadenada: HTTP Basic Auth sobre Apache, el formulario de `login.php`, el acceso SSH del usuario `balutin` y, finalmente, un bruteforce directo a `su root` cuando no se encontró ningún vector clásico de escalada de privilegios.

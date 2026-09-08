@@ -77,7 +77,7 @@ su oscar
 # contraseña: lacasadepinypon
 ```
 
-## Escalada de Privilegios
+## Escalada de privilegios
 
 ```bash
 sudo -l

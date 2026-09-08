@@ -53,7 +53,7 @@ ssh agua@172.17.0.2
 # contraseña: bebeaguaqueessano
 ```
 
-## Escalada de Privilegios
+## Escalada de privilegios
 
 ```bash
 sudo -l

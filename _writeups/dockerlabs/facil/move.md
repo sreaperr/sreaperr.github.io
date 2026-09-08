@@ -149,3 +149,7 @@ whoami
 - **Secretos en `/tmp`:** no almacenar contraseñas en ficheros del sistema de ficheros temporal accesibles por cualquier proceso.
 - **KeePass:** usar master password distinto de las credenciales que protege.
 - **Sudo:** no otorgar `NOPASSWD` sobre scripts que el usuario pueda sobreescribir. Si el script es necesario, asegurarse de que pertenece a root y no tiene permisos de escritura para el usuario sudoer.
+
+## Conclusión
+
+La cadena de explotación combina un Directory Traversal en Grafana (CVE-2021-43798) para filtrar una contraseña, la apertura de una base de datos KeePass que reutiliza esa misma contraseña para el usuario `freddy`, y un script Python escribible ejecutable por `sudo` que entrega la shell de root.

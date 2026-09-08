@@ -75,3 +75,7 @@ python3.7 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 ```
 
 **Root conseguido.** ✓
+
+## Conclusión
+
+La máquina se resuelve encadenando Ghostcat (CVE-2020-1938) para filtrar el nombre de usuario `jerry` desde `web.xml`, fuerza bruta SSH con Hydra para obtener sus credenciales, y un binario `python3.7` con bit SUID que permite escalar directamente a root.

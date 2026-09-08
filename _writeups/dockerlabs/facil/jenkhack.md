@@ -72,9 +72,7 @@ export SHELL=bash
 stty rows 50 cols 184
 ```
 
-
-
-## Post-explotación / Escalada de privilegios
+## Escalada de privilegios
 
 En el directorio `/var/www/jenkhack/` encontramos un `note.txt` con credenciales ofuscadas:
 
@@ -96,16 +94,6 @@ su jenkhack
 ```
 
 Comprobamos permisos sudo:
-
-```bash
-sudo -l
-```
-
-```
-(ALL : ALL) NOPASSWD: /usr/local/bin/bash
-```
-
-Escalamos a `jenkhack` y comprobamos sudo:
 
 ```bash
 sudo -l
@@ -131,3 +119,7 @@ El binario ejecuta nuestro script como root vía `system()` y obtenemos shell de
 | Flag | Hash |
 |------|------|
 | user.txt | 3635ccd7044e99813883c8a1b95ced04 |
+
+## Conclusión
+
+El acceso inicial se consigue filtrando credenciales de Jenkins desde el HTML del puerto 80 y ejecutando una reverse shell vía la Script Console de Groovy; la escalada final combina credenciales ofuscadas en Base85 con un binario `sudo` que invoca un script en un directorio escribible por el usuario.

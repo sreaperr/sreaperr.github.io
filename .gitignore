@@ -1,0 +1,8 @@
+# Writeups en borrador — no publicar hasta estar listos
+_drafts/
+
+# Obsidian — config local del editor, no forma parte del sitio
+.obsidian/
+
+# Claude Code — config/agentes locales, no forma parte del sitio
+.claude/

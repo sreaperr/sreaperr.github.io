@@ -1,7 +1,7 @@
 ---
-title: DockerLabs - Galeria
-source: DockerLabs
-difficulty: Fácil
+title: "DockerLabs - Galeria"
+difficulty: "Fácil"
+source: "DockerLabs"
 ---
 
 Laboratorio para practicar fuzzing web, explotación de file upload sin restricciones y escalada de privilegios mediante PATH hijacking.

@@ -123,3 +123,7 @@ Acceso root conseguido.
 | 2 | Port knocking 7000→8000→9000 | SSH abierto |
 | 3 | Hydra brute force SSH (`toctoc:kittycat`) | Acceso como toctoc |
 | 4 | `sudo NOPASSWD /opt/bash` | root |
+
+## Conclusión
+
+La máquina depende de descubrir la secuencia de port knocking oculta en un fichero web para abrir SSH, fuerza bruta con Hydra para obtener las credenciales del único usuario, y un permiso `sudo NOPASSWD` directo sobre `/opt/bash` que entrega root sin más esfuerzo.

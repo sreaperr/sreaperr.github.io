@@ -2,8 +2,6 @@
 title: "DockerLabs - Intership"
 difficulty: "Fácil"
 source: "DockerLabs"
-status: "done"
-date: "2026-07-21"
 ---
 
 Laboratorio para practicar inyección SQL, fuerza bruta SSH y escalada de privilegios en Linux.
@@ -124,3 +122,7 @@ sudo vim -c ':!/bin/bash'
 whoami
 # root
 ```
+
+## Conclusión
+
+La máquina combina una inyección SQL clásica para saltar la autenticación web, extracción de credenciales con SQLmap, esteganografía sobre una imagen de perfil para pivotar a `valentina`, y un `sudo` mal configurado sobre `vim` que entrega la shell de root.
